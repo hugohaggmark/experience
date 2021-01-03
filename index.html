@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSK0D5D6E1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-HSK0D5D6E1");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hugo Häggmark, contact" />
+    <title>Hugo Häggmark</title>
+    <script src="/_includes/data.js"></script>
+    <link rel="stylesheet" href="/_includes/style.css" />
+  </head>
+  <body>
+    <div id="cookie" class="hidden">
+      <div class="cookie-content">
+        <img src="/assets/cookie.png" alt="cookie" width="472" height="340" />
+        <span>This page uses Google Analytics to track usage.</span>
+        <button onclick="consent()">Fine with me</button>
+      </div>
+    </div>
+    <div class="card hero">
+      <div class="container">
+        <div class="profile">
+          <div class="picture">
+            <img src="assets/profile.png" alt="Hugo Häggmark profile picture" width="10px" height="10px"/>
+          </div>
+          <h1 class="hero-text">Hugo Häggmark</h1>
+          <div class="theme-toggle normal-text anchor-text" onclick="toggleTheme()"></div>
+          <p>
+           <div class="heading-text">Software Engineer @ Grafana Labs</div>
+           <div class="normal-text">Stockholm, Sweden</div>
+          </p>
+          <p>
+           <div class="title-text">Contact</div>
+           <div class="normal-text anchor-text">hugo.haggmark+contact(at)gmail.com</div>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="container">
+        <div class="heading-text">About</div>
+        <div class="normal-text">
+          <p>
+            Former Microsoft employee born and bred in the .Net world transformed into Fullstack/Front end developer working with Node.js and
+            React/Redux.
+          </p>
+          <p>
+            I'm not religious about specific languages, frameworks or tools instead I find great passion in exploring new languages, frameworks and
+            tools.
+          </p>
+          <p>I'm a strong team player that brings lots of skills, warmness and humor to the team.</p>
+          <p>I'm as equally passionate about coaching team members as I am being coached by team members.</p>
+          <p>I'm a quick learner and I adapt quickly to new challenges and environments.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="container">
+        <div class="heading-text">Experience</div>
+        <div id="experience"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="container">
+        <div class="heading-text">Education</div>
+      </div>
+      <div class="grid-container">
+        <logo>
+         <div>
+          <img src="assets/su.png" class="logo" alt="logotype for Stockholm University" width="56px" height="56px"/>
+         </div>
+        </logo>
+        <header class="normal-text">
+          <a href="https://www.su.se/english/" class="anchor-text normal-text" target="_blank" rel="noopener">
+            <div class="title-text">Stockholm University</div>
+            <div>Master of Science, Computer Sciences</div>
+            <div>1995 - 2000</div>
+            <div>Stockholm, Sweden</div>
+          </a>
+        </header>
+        <desc class="normal-text"><div></div></desc>
+      </div>
+      <div class="normal-text">Hugo Häggmark © 2020</div>
+    </div>
+    <script>
+     document.onreadystatechange = function () {
+      if (document.readyState === 'interactive') {
+       renderExperience();
+       toggleTheme();
+       checkConsent();
+      }
+     }
+    </script>
+  </body>
+</html>
