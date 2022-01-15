@@ -193,3 +193,13 @@ desc > div {
   padding: 10px 20px;
   border-radius: 10px;
 }
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  margin: 0 20px 0 0;
+  padding: 10px 0;
+}
