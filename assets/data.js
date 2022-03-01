@@ -8,7 +8,7 @@ const data = {
           "Member of the Front Platform Squad responsible for developing and maintaining Front End UI components, frameworks, tools and tests used by internal and external contributors.  Working mainly with TypeScript, React, RxJs and Redux but also AngularJs and Go #democratizemetrics",
         location: "Stockholm, Sweden",
         start: "Jan 2019",
-        end: "",
+        end: "Feb 2022",
         logo: "assets/grafana.png",
         url: "https://grafana.com/",
       },
