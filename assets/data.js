@@ -2,6 +2,17 @@ const data = {
   experience: {
     positions: [
       {
+        company: 'Björn Lundén',
+        title: 'Software Engineer',
+        description:
+          'Leading the Front End teams and common platform work in Sweden, Denmark and the Netherlands. Responsible for UI components, frameworks, tools and tests used by internal teams throughout the Bjorn Lunden group. Working mainly with TypeScript, Svelte, Angular, and RxJs.',
+        location: 'Ljusdal, Sweden',
+        start: 'Aug 2022',
+        end: 'Jan 2025',
+        logo: 'assets/bl.png',
+        url: 'https://bjornlunden.com',
+      },
+      {
         company: 'Grafana Labs',
         title: 'Software Engineer',
         description:
