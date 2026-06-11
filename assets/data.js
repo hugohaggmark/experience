@@ -2,6 +2,16 @@ const data = {
   experience: {
     positions: [
       {
+        company: 'Grafana Labs',
+        title: 'Software Engineer',
+        description:
+          'Member of the Plugins Platform Squad responsible for developing and maintaining Plugin tools and member of Front Platform Squad responsible for developing and maintaining Front End UI components, frameworks, tools and tests used by internal and external contributors.  Working mainly with TypeScript, React #democratizemetrics',
+        location: 'Ljusdal, Sweden',
+        start: 'Feb 2025',
+        logo: 'assets/grafana.png',
+        url: 'https://grafana.com/',
+      },
+      {
         company: 'Björn Lundén',
         title: 'Software Engineer',
         description:
