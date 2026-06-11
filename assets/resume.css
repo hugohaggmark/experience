@@ -131,9 +131,26 @@ section > p {
 }
 
 .entry {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  column-gap: 14px;
   margin-bottom: 14px;
   page-break-inside: avoid;
   break-inside: avoid;
+}
+
+.entry-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #fff;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.entry-body {
+  min-width: 0;
 }
 
 .entry-title {
@@ -199,6 +216,14 @@ footer {
   a {
     color: var(--text);
     text-decoration: none;
+  }
+  .entry-logo {
+    width: 36px;
+    height: 36px;
+  }
+  .entry {
+    grid-template-columns: 36px 1fr;
+    column-gap: 12px;
   }
   @page {
     margin: 1.5cm 1.8cm;

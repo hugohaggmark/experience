@@ -49,13 +49,16 @@
       <section>
         <h2>Education</h2>
         <article class="entry">
-          <div class="entry-title">
-            <span class="company">Stockholm University</span>
-            <span class="dates">1995 – 2000</span>
-          </div>
-          <div class="entry-sub">
-            <span>Master of Science, Computer Sciences</span>
-            <span>Stockholm, Sweden</span>
+          <img class="entry-logo" src="assets/su.png" alt="Stockholm University" />
+          <div class="entry-body">
+            <div class="entry-title">
+              <span class="company">Stockholm University</span>
+              <span class="dates">1995 – 2000</span>
+            </div>
+            <div class="entry-sub">
+              <span>Master of Science, Computer Sciences</span>
+              <span>Stockholm, Sweden</span>
+            </div>
           </div>
         </article>
       </section>
@@ -73,6 +76,14 @@
         for (const position of data.experience.positions) {
           const entry = document.createElement('article');
           entry.className = 'entry';
+
+          const logo = document.createElement('img');
+          logo.className = 'entry-logo';
+          logo.setAttribute('src', position.logo);
+          logo.setAttribute('alt', `${position.company} logo`);
+
+          const body = document.createElement('div');
+          body.className = 'entry-body';
 
           const titleRow = document.createElement('div');
           titleRow.className = 'entry-title';
@@ -100,14 +111,17 @@
           sub.appendChild(title);
           sub.appendChild(location);
 
-          entry.appendChild(titleRow);
-          entry.appendChild(sub);
+          body.appendChild(titleRow);
+          body.appendChild(sub);
 
           if (position.description) {
             const desc = document.createElement('p');
             desc.textContent = position.description;
-            entry.appendChild(desc);
+            body.appendChild(desc);
           }
+
+          entry.appendChild(logo);
+          entry.appendChild(body);
 
           root.appendChild(entry);
         }
