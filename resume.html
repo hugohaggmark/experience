@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hugo Häggmark — Resume" />
+    <title>Hugo Häggmark — Resume</title>
+    <link rel="stylesheet" href="assets/resume.css" />
+    <script src="assets/data.js"></script>
+  </head>
+  <body>
+    <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+
+    <main class="resume">
+      <header class="resume-header">
+        <div class="text">
+          <h1>Hugo Häggmark</h1>
+          <p class="role">Software Engineer</p>
+          <p class="location">Ljusdal, Sweden</p>
+          <p class="contact">
+            <span>hugoh(at)duck.com</span>
+            <a href="https://github.com/hugohaggmark" target="_blank" rel="noopener">github.com/hugohaggmark</a>
+            <a href="https://www.hugohaggmark.com/experience/" target="_blank" rel="noopener">hugohaggmark.com</a>
+          </p>
+        </div>
+        <img class="avatar" src="assets/profile.jpg" alt="Hugo Häggmark" />
+      </header>
+
+      <section>
+        <h2>About</h2>
+        <p>
+          With over 20 years experience in the software industry Hugo has mastered every challenge and role that has crossed his path.
+        </p>
+        <p>
+          Hugo's true strengths lie outside of tech, like keeping curious and humble in a very fast paced industry. He is a passionate team
+          player who brings mentoring, warmness and humor to any situation and adapts quickly to new challenges and environments.
+        </p>
+        <p>
+          Hugo enjoys working on hard challenges and he thrives on delivering clean high quality solutions that are easy to read and maintain.
+          At this stage in his career he is happy spending his time solely on writing code and mentoring others.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div id="experience-list"></div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <article class="entry">
+          <div class="entry-title">
+            <span class="company">Stockholm University</span>
+            <span class="dates">1995 – 2000</span>
+          </div>
+          <div class="entry-sub">
+            <span>Master of Science, Computer Sciences</span>
+            <span>Stockholm, Sweden</span>
+          </div>
+        </article>
+      </section>
+
+      <footer>Hugo Häggmark © 2026</footer>
+    </main>
+
+    <script>
+      function renderResume() {
+        const root = document.getElementById('experience-list');
+        if (!root || !data || !data.experience) {
+          return;
+        }
+
+        for (const position of data.experience.positions) {
+          const entry = document.createElement('article');
+          entry.className = 'entry';
+
+          const titleRow = document.createElement('div');
+          titleRow.className = 'entry-title';
+
+          const company = document.createElement('span');
+          company.className = 'company';
+          company.textContent = position.company;
+
+          const dates = document.createElement('span');
+          dates.className = 'dates';
+          dates.textContent = `${position.start} – ${position.end || 'Present'}`;
+
+          titleRow.appendChild(company);
+          titleRow.appendChild(dates);
+
+          const sub = document.createElement('div');
+          sub.className = 'entry-sub';
+
+          const title = document.createElement('span');
+          title.textContent = position.title;
+
+          const location = document.createElement('span');
+          location.textContent = position.location;
+
+          sub.appendChild(title);
+          sub.appendChild(location);
+
+          entry.appendChild(titleRow);
+          entry.appendChild(sub);
+
+          if (position.description) {
+            const desc = document.createElement('p');
+            desc.textContent = position.description;
+            entry.appendChild(desc);
+          }
+
+          root.appendChild(entry);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', renderResume);
+    </script>
+  </body>
+</html>
